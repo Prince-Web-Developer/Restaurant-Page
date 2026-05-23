@@ -1,4 +1,4 @@
 import css from "./style.css"
-import {navController} from "./js/nav.js"
+import nav from "./js/nav.js"
+import slider from "./js/slider.js"
 
-navController()

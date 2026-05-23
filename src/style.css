@@ -19,10 +19,9 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  max-width: 100vw;
   padding: 20px;
-  width: 100vw;
   font-family: "Poppins", sans-serif;
-  ;
 }
 
 img,
@@ -102,8 +101,11 @@ nav>ul {
 .tab {
   padding-bottom: 2px;
   font-weight: bold;
-  font-size: clamp(0.8rem, 0.5rem + 0.5vw, 2rem);
   border-bottom: 2px transparent;
+}
+
+.smaller-font{
+  font-size: clamp(0.8rem, 0.5rem + 0.5vw, 2rem);
 }
 
 .tab:hover,
@@ -125,10 +127,224 @@ nav>ul {
   border-bottom:0px;
 }
 
+
+
+.changeVisibility{
+  display: flex !important;
+}
+
+
+/* Home section styling */
+
+.section{
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  width: 100%;
+  padding: 80px 0px;
+  align-items: center;
+}
+
+.intro{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.intro > *{
+  flex: 1;
+}
+
+
+
+
+.text-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+
+.img-container img{
+  width: 100%;
+}
+
+
+.gray-text-styling{
+  background-color: chocolate;
+  color: white;
+  padding: 10px;
+}
+
+.pageSection{
+  padding: 30px;
+  background-color: goldenrod;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.pastaImgCon{
+  display: flex;
+  justify-content: center;
+}
+
+#pastaImg{
+  max-width: 60%;
+  object-fit: contain;
+}
+
+.SectionText{
+  max-width: 14ch;
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+  -webkit-text-stroke: 0.5px black; 
+}
+
+.gallerySection{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.galleryBtn{
+  background-color: #cccccc;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.gallerySection > button:hover,.gallerySection > button:focus{
+  background-color: #dddddd;
+  cursor: pointer;
+}
+
+.galleryInterface{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gallery{
+  width: 100%;
+  display: grid;
+  grid-auto-columns: 100%;
+  gap: 30px;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  height: 60vh;
+}
+
+.img1{
+  background: url("images/image1.webp");
+}
+.img2{
+  background: url("images/image2.webp");
+}
+.img3{
+  background: url("images/image3.jpeg");
+}
+.img4{
+  background: url("images/redcharlie-t-7KEq9M0b0-unsplash.jpg");
+}
+
+.gallery > *{
+  display: flex;
+  justify-content: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.gallery {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.galleryBtnCon{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.galleryBtnCon > button{
+  width: 0.5em;
+  height: 0.5em;
+}
+
+
+/* review Section */
+
+.commentSection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.reviews{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 20px;
+}
+
+.review{
+  padding: 20px;
+  border: 2px solid gray;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.profile1{
+  background: url("images/donaldTrump.webp");
+}
+
+.profile2{
+  background: black;
+}
+
+
+.profilePic{
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.profile{
+  border-bottom: 2px solid gray;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+
 @media screen and (max-width:500px) {
+
   #navList {
     display: none;
     padding: 20px;
+    height: 100%;
     position: absolute;
     inset: 0;
     background-color: white;
@@ -140,10 +356,16 @@ nav>ul {
   #bar{
     display: block;
   }
+
+  .gallerySection > button{
+    display: none;
+  }
 }
 
-.changeVisibility{
-  display: flex !important;
+
+
+@media screen and (max-width:800px) {
+  .intro{
+    flex-direction: column;
+  }
 }
-
-
