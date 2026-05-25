@@ -32,6 +32,10 @@ export default {
                 test: /\.(woff2|woff)$/i,
                 type: "asset/resource",
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
+            }
         ],
     },
 };
