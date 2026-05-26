@@ -41,7 +41,7 @@ export function createHome() {
     backButton.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z"/></svg>`
 
     const galleryInterface = helper.createElement("div", { cls: ["galleryInterface"] })
-    const gallery = helper.createElement("div", { cls: ["gallery"] })
+    const gallery = helper.createElement("div", { cls: ["gallery","scrollBar"] })
 
     const galleryImg = helper.createElement("div", { cls: ["galleryImgCon"] })
 
@@ -102,7 +102,7 @@ export function createHome() {
 
 
 
-    commentSectionDiv.append(commentHeading,reviewsContainer)
+    commentSectionDiv.append(commentHeading, reviewsContainer)
 
     home.append(intro, pageSection, gallerySection, commentSectionDiv)
 

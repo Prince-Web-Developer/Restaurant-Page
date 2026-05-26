@@ -22,6 +22,7 @@ export function setUpSlider() {
         const img = gallery.querySelector(`[data-img="${imgToMakeVisible}"]`)
         img.scrollIntoView({
             behavior: "smooth",
+            block: "nearest"
         })
     }
 
