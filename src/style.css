@@ -307,6 +307,10 @@ nav>ul {
   height: 0.5em;
 }
 
+.galleryBtnCon button:hover{
+  cursor: pointer;
+}
+
 
 /* review Section */
 
@@ -429,11 +433,21 @@ nav>ul {
     background-repeat: no-repeat;
     background-position: center;
   }
-
-
-
 }
 
+#about{
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  border: 1px solid black;
+  margin-top: 40px;
+  border-radius: 20px;
+}
+
+#msg{
+  text-align: center;
+}
 
 
 

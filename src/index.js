@@ -33,3 +33,4 @@ function changeMenu(e) {
 }
 
 menuButtons[0].click()
+menuButtons[0].focus()
