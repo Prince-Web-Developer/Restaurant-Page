@@ -373,7 +373,7 @@ nav>ul {
   .menuCard {
     width: 100%;
     height: 100%;
-    overflow-x: scroll;
+    overflow-x: hidden;
     display: grid;
     grid-template-columns: repeat(5, max(280px, 33%));
     gap: 120px;
@@ -429,7 +429,7 @@ nav>ul {
   .menuImg {
     flex-grow: 1;
     width: 100%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
